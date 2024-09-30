@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Gabriel-Ing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -49,14 +49,53 @@
 						<!-- Intro -->
 							<article id="phdProjects">
 								<h2 class="major">Summary of different projects</h2>
-								<span class="image main"><img src="images/L1200294.jpg" alt="" /></span>
-								<p></p>
+                                <p>If you haven't read the <a href="#work">PhD Summary</a> page, these follow on from it so I recommend starting there! Alternatively, if you want the full details, the full thesis can be found <a href="https://discovery.ucl.ac.uk/id/eprint/10189770/">here!</a></p>
+                                <ul class="alt">
+                                    <li><h3>Main project - Imaging and reconstructing proteins</h3>
+                                <p>As discussed in the summary, I was trying to image proteins to reconstruct a model of the protein and in future find a way to identify the dynamics of the protein. I repeatedly imaged some standard proteins (apoferritin, ferritin and beta-galactosidase) in different conditions. I took hundreds of videos (and terabytes of data) but never got any <i>good</i> data on this. <br><br> In the end, I concluded that this project was physically impossible with the equipment I had available, and may never be possible. This conclusion was supported by a <a href="https://doi.org/10.1002/pro.5125">publication this year</a>.</p>
+                                </li>
+                                <li>
+                                <h3>Imaging Amyloid-beta </h3>
+                                <p>Amyloid-beta is a small peptide (basically a tiny protein) which stick together to form larger structure including fibres and plaques. This process is associated with Alzheimer's disease. The mechanisms behind this aren't completely clear, so we aimed to image the process to give some insights (along with how we could stop it happening with drugs!). </p>
+                                <span class="image main"><img src="images/Amyloid-pathway.png" /><p>The amyloid aggregation pathway</p></span>
+                                <p>I had some success here. In particular, I saw examples of the amyloid-beta forming phase-separated droplet, this property was not known about at the time, but was published by others at a similar time. 
+                                </p>
+                                <span class="image main"><img src="images/Phase-separation-pathway.png" /><p>The proposed phase separation aggregation pathway</p></span>
+                                <span class="image main"><img src="images/Separated-droplets.png"/> <p>A phase separated droplet bursting</p></span>
+                            </li>
+                                <li>
+                                <h3>Image Processing and Analysis</h3>
+                                
+                                <p>My data was largely images and videos, which required pretty painstaking manual analysis with an app called ImageJ (FIJI). I quickly decided I needed to automate some processing because it was taking too much time (often this kind of work is divided between experimental and computational students). I used Python to automate processing and ended up creating a library of useful methods. <br><br> 
+                                
+                                I wanted to make this as simple as possible to use, so I developed an app, so it was available to non-coding users. </p>
+                                <span class="image main"><img src="images/SimpliPyTEM-image.png" /></span>
+
+                                <p>I also made the code as straight-forward to use as possible, while also including powerful options, including using a pre-trained AI to de-noise the image.
+                                </p>
+                                <span class="image main"><img src="images/SimpliPyTEM-image2.png" /></span>
+                                <p>For more info, or to use the library, check out the <a href="https://simplipytem.readthedocs.io/en/latest/">documentation</a>, <a href="https://simplipytem.readthedocs.io/en/latest/Tutorials/MicrographAnalysisTutorial.html">tutorials</a> and <a href="https://doi.org/10.1371/journal.pone.0285691">publication</a> </p>
+                                </li>
+                                </ul>
+                                <h3>Side pieces</h3>
+                                <ul><li>
+                                <h5>CTF Simulator</h5>
+                                <p>Theres a concept in electron microscopy called the contrast transfer function (CTF). This is a mathematical function which models how images are degraded due to imperfections in lenses. I wanted to better understand how microscope parameters affect this degradation so I built an interactive plot so the result of changing the variables could be visualised. This is on <a href="https://github.com/gabriel-ing/CTF_sim">my github</a>.</p>
+                                <span class="image main"><img src="images/CTF_simulation.gif"/> <p>My CTF simulator</p></span>
+                                </li>
+                                <li>
+                                <h5>Statistically Averaged, Noisy Picture </h5>
+                                <p>One important concept in electron microscopy is that if you average together many noisy images of the same thing, the noise is reduced and the signal underneath is clearer. I used some basic image processing in Python to create a figure to generate this (full walkthrough <a href="https://github.com/gabriel-ing/EM_calculations/blob/main/Statistically_noisy_averaged_picture.ipynb">here</a>).
+                                </p>
+                                </li>
+                                <span class="image main"><img src="images/snapshot.png"/><p></p></span>
+                                
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">PhD Summary</h2>
-								<span class="image main"><img src="images/L1200294.jpg" alt="" /></span>
+								<span class="image main"><img src="images/MeWithMicroscope.jpeg" alt="Me with the electron microscope" /><p>Me with the electron microscope</p></span>
 								<p>The main aim of my PhD was to use electron microscopy to image proteins in liquids. Don't worry if you don't understand this sentence, let me explain it bit by bit!</p>
                                 <h5>Electron Microscopy</h5>
                                 <p>An electron microscope is essentially a very big microscope which can look at very small things. A conventional light microscope is limited in resolution (i.e. how small it can see) due to the wavelength of light. This limit is generally a few micrometres (10<sup>-6</sup>mm). Electrons can be used instead of light, meaning this limit can be reduced to tenths or even hundredths of nanometers (10<sup>-10</sup>-10<sup>-11</sup>m). This detail is needed for my samples of interest!
@@ -90,13 +129,36 @@
                             </article>
                             <article id="personalProjects">
                                 <h2 class="major">Personal Projects</h2>
-                                <ul>
-                                    <li>Yahtzee in Java (Java, App building)</li>
-                                    <li>Project San Marino (Python, Apis)</li>
-                                    <li>Running Data Dashboard (Flask/D3.js)</li>
-                                    <li>Shopping list generator (GPT4 in  Python)</li>
+                                <ul class="alt">
+                                    <li><strong><a href="#sanMarino">Project San Marino (Python, Apis)</a></strong>
+                                        <p>A virtual Exercise challenge from Edinburgh to San Marino! </p>
+                                    </li>
+                                    <li><strong><a href='#yahtzee'>Yahtzee in Java (Java, App building)</a></strong>
+                                    <p> To practice (or learn) some Java, I built an app-based version of classic dice game Yahtzee </p></li>
+
+                                    <li>
+                                        <strong><a href="#runningDash">Running Data Dashboard (Flask/D3.js)</a></strong>
+                                        <p>A dashboard to help track the running I have done. I made this to practice my data visualisation skills with D3.js</p>
+                                    </li>
+                                    <li>
+                                        <strong><a href="#shoppingListGenerator">Shopping list generator (GPT4 in  Python)</a></strong>
+                                        <p>My partner was fed up of painstakingly copying out the ingredients from recipes on webpages to make shopping list, so I made a little app to do this using GPT within Python</p>
+                                    </li>
                                 </ul>
                             </article>
+                            <article id="sanMarino">
+                                <h2 class="major">Project San Marino</h2>
+                            </article>
+                            <article id="yahtzee">
+                                <h2 class="major">Yahtzee!</h2>
+                            </article>
+                            <article id="runningDash">
+                                <h2 class="major">Running Data Dashboard</h2>
+                            </article>
+                            <article id="shoppingListGenerator">
+                                <h2>Shopping List Generator</h2>
+                            </article>
+
 
 
 
@@ -125,10 +187,8 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/gabriel-ing-b94586144" class="icon brands fa-twitter"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/gabriel-ing" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
