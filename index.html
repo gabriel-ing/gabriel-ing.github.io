@@ -18,7 +18,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Gabriel Ing</h1>
+								<h1>Dr Gabriel Ing</h1>
 								<p>Scientist | Developer | Photographer | Who knows what else</p>
 							</div>
 						</div>
@@ -28,7 +28,7 @@
 								<li><a href="#work">PhD Summary</a></li>
                                 <li><a href="#phdProjects">PhD Projects</a></li>
                                 <li><a href="#personalProjects">Personal Projects</a></li>
-                                <li><a href="#photos">Photos</a></li>
+                                <li><a href="#hobbies">Hobbies</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -84,7 +84,7 @@
                                 <span class="image main"><img src="images/CTF_simulation.gif"/> <p>My CTF simulator</p></span>
                                 </li>
                                 <li>
-                                <h5>Statistically Averaged, Noisy Picture </h5>
+                                <h5>Statistically Noisy, Averaged Picture </h5>
                                 <p>One important concept in electron microscopy is that if you average together many noisy images of the same thing, the noise is reduced and the signal underneath is clearer. I used some basic image processing in Python to create a figure to generate this (full walkthrough <a href="https://github.com/gabriel-ing/EM_calculations/blob/main/Statistically_noisy_averaged_picture.ipynb">here</a>).
                                 </p>
                                 </li>
@@ -131,34 +131,88 @@
                                 <h2 class="major">Personal Projects</h2>
                                 <ul class="alt">
                                     <li><strong><a href="#sanMarino">Project San Marino (Python, Apis)</a></strong>
-                                        <p>A virtual Exercise challenge from Edinburgh to San Marino! </p>
+                                        <p>A virtual Exercise challenge from Edinburgh to San Marino! See the full article linked above!</p>
                                     </li>
-                                    <li><strong><a href='#yahtzee'>Yahtzee in Java (Java, App building)</a></strong>
-                                    <p> To practice (or learn) some Java, I built an app-based version of classic dice game Yahtzee </p></li>
-
+                                    
                                     <li>
                                         <strong><a href="#runningDash">Running Data Dashboard (Flask/D3.js)</a></strong>
                                         <p>A dashboard to help track the running I have done. I made this to practice my data visualisation skills with D3.js</p>
                                     </li>
                                     <li>
-                                        <strong><a href="#shoppingListGenerator">Shopping list generator (GPT4 in  Python)</a></strong>
-                                        <p>My partner was fed up of painstakingly copying out the ingredients from recipes on webpages to make shopping list, so I made a little app to do this using GPT within Python</p>
+                                        <strong>Yahtzee in Java (Java, App building)</strong>
+                                        <p> To practice (or learn) some Java, I built an app-based version of classic dice game Yahtzee
+                                            <br><br> This project turned out to be fairly straight-forward (took a couple of days), but I really enjoyed making it! 
+                                            <br><br> You can find the project on <a href="https://github.com/gabriel-ing/Yahtzee_Java">github</a></p>
+                                            
+                                            <span class="image main"><img src="images/gameExample.png"/></span> 
                                     </li>
-                                </ul>
+                                    <li>
+                                            <strong>Shopping list generator (Web-scraping, GPT4 in  Python)</strong>
+                                            <p>My partner was fed up of painstakingly copying out the ingredients from recipes on webpages to make shopping list, so I made a little app to do this using GPT in Python. <br><br> The process behind this was simple:</p> 
+                                            <ol>
+                                                <li>
+                                                    <p>Add recipe webpage links in app and click generate list</p>
+                                                </li>
+                                                <li>
+                                                    <p>Get webpage with requests and take all the text from the page using beautiful soup</p>
+                                                </li>
+                                                <li> 
+                                                    <p>Feed GPT the text and ask for a list of ingredients back</p>
+                                                </li>
+                                                <li>
+                                                    <p>Take the lists from each webpage and ask GPT to group this into supermarket categories (e.g. fruit and veg, meat, etc)</p>
+                                                </li>
+                                            </ol>
+                                            <span class="image main"><img src="images/shoppingListGenerator.png"/></span>
+                                            <p>I haven't published this because it uses my openAI account details, and the rest of the app is fairly simple, but if you would like a version, get in touch!</p>
+                                    </li>
+                                    </ul>
                             </article>
                             <article id="sanMarino">
                                 <h2 class="major">Project San Marino</h2>
+                                <p>For more info, this project is available on <a href="https://github.com/gabriel-ing/ProjectSanMarino">github</a></p>
+                                <p>My partner and I wanted to create a virtual exercise challenge, a bit like the <a href="https://www.theconqueror.events/">conquerer challenges</a> but without the cost. The idea was that we would track the distance we walked, ran or cycled, aiming to cover a set distance over a couple of months.  We decided to go from our home in Edinburgh to San Marino because it sounded like the right distance for our time frame (2-3 months) and expected exercise amounts. This article will go through how I approached tracking the challenge.
+                                </p><h5>Question 1: How should I track the challenge?</h5>
+                                <p>As with most runners and cyclists, we are used to tracking our exercise routes on the online exercise social media app <a href="https://www.strava.com/">Strava</a>.<br><br> My first plan of attack was to take screenshots of the data, upload it to a google drive, and using an image-reading tool to extract the data from a screenshot. However, after running into some issues with that I realised there was a much easier way: usings Strava's data-downloading APIs. <br><br> Its possible to download all your exercise data directly from Strava. Now this is quite annoying to set up and had me tearing my hair out for a couple of hours but I eventually figured it out. I'm not going to described the full process here because I followed tutorials made by <a href="https://medium.com/@lejczak.learn/get-your-strava-activity-data-using-python-2023-%EF%B8%8F-b03b176965d0">Ksawery Lejczak</a>, <a href="https://towardsdatascience.com/using-the-strava-api-and-pandas-to-explore-your-activity-data-d94901d9bfde">Matt Ambrogi</a> and <a href="https://www.youtube.com/watch?v=sgscChKfGyg&t=258s&ab_channel=franchyze923">franchyze923</a>. I recommend starting with these if you want to use the Strava API. The result of this is a massive table with <i>loads</i> of info.</p>
+                                <span class="image main"><img src="images/Strava_data2.png"/><p>A small sample of the downloadable data table</p></span>
+                                <h5>Question 2: How can I create the route?</h5>
+                                <p>This was answered fairly simply. I wanted to create a .kmz file which is used to store map details. It turns out you can create custom maps on google's <a href="https://www.google.com/maps/d/">My Maps</a> and then export coordinates as a .kmz file. I created my route using googles mapping tools.</p>
+                                <span class="image main"><img src="images/Create_directions.png"/><p>My Maps mapping tools</p></span>
+                                <h5>Question 3: How should I plot the route and my position on a map?</h5>
+                                <p>
+                                    I'm a Python native. Its the first coding language I learned, its by far my most used, it can do everything(ish), so there was never much of a question, I was always going to use Python. I used several different geographic libraries to create the route and calculate my position on the route. I'm not going to go into every detail of data processing, but I used Folium to create nice looking maps. This library made it easy to plot the route as well as adding our current position to the route as pop-ups. Below is the final example of this.
+                                </p>
+                                <div id="map-container" class="iframe-container">
+                                    <iframe src="Project_san_marino_map.html" title="Folium Map"></iframe>
+                                </div>
+                                <h5>Question 4 - How best to track the challenge?</h5>
+                                <p>Now I had all the data I had think about what information I wanted to output and how to do it. I decided to create an webpage-based (html) dashboard with the main map, some plots and some updated information. The main plots I wanted was a comparison of distance done by me and my partner, a tracking worm showing the distance over time (alongside the target rate) and maps of the route, and all the routes that we walked/ran/cycled. This was a static webpage that was created by running the script. Not the most-convenient or advanced way of doing this, but it certainly did the job!
+                                </p>
+                                <span class="image main"><a href="sanmarino/dash.html"><img src="images/Example_dash.png"/></a> <p>The dashboard. For the final state click the image!</p></span>
+                                <h5>Question 5 - How did the challenge go?</h5>
+                                <p>We completed it! 2200km in just under 2 months. We barely believed we would manage it, but we actually smashed past our most optimistic goal. Below is a picture of me after we finished the race on a french beach.</p>
+                                <span class="image main"><img src="images/EndOfSanMarino.jpeg"/></span>
                             </article>
-                            <article id="yahtzee">
-                                <h2 class="major">Yahtzee!</h2>
-                            </article>
-                            <article id="runningDash">
-                                <h2 class="major">Running Data Dashboard</h2>
-                            </article>
-                            <article id="shoppingListGenerator">
-                                <h2>Shopping List Generator</h2>
-                            </article>
+                            
 
+
+                            <article id="runningDash"> 
+                                <h2 class= "major">Running Data Dashboard</h2>
+                                <p>I wanted to learn how to use D3.js to create stunning interactive visuals, as well as wanting a convenient way of looking at running data, like distance run per week and the pace of the run. D3.js is a JavaScript library used to create <a href="https://observablehq.com/@d3/gallery?utm_source=d3js-org&utm_medium=hero&utm_campaign=try-observable">amazing visuals</a>. It is super customisable, but the trade off being that it requires a lot of manual work.<br><br>At the same time I wanted to learn to create dynamic websites using a Python backend with Flask. As github pages (which hosts this site) can only be used for static websites, I can't show the data being downloaded and plotted all together, so the plot below won't be updated automatically, but I have used Flask to link the dashboard directly to the Strava API.
+                                </p>
+                                <span class="image main">
+                                <div class="chart" id="bubbleChart">
+                                    <h5>Pace and Distance by Time</h5>
+                                    <svg></svg>
+                                    <p>Try clicking the circles in the legend! (click legend background to undo)</p>
+                                </div>
+                                </span>
+                                <script src="https://d3js.org/d3.v7.min.js"></script>
+                                <script src="BubbleChart.js"></script>
+                        
+
+
+                            </article>
 
 
 
