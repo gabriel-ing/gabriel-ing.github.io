@@ -78,7 +78,7 @@ backface-visibility: hidden;
 .flip-card-front {
 /*background-image: url("bg_cropped.jpg");
 box-shadow: inset 0 0 0 2000px rgba(50, 50, 50, 0.5);*/
-background:linear-gradient(0deg, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.2)), url("https://github.com/gabriel-ing/gabriel-ing.github.io/blob/main/images/bg_cropped_small.jpg?raw=true");
+background:linear-gradient(0deg, rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.1)), url("https://github.com/gabriel-ing/gabriel-ing.github.io/blob/main/images/ING12256-reduced.jpg?raw=true");
      
 background-color: rgba(0,0,0,0.7);
 
@@ -482,7 +482,7 @@ Contact page
             flipCardBack = document.getElementsByClassName("flip-card-back")[0];
             
             if (button === "edu") {
-                flipCardBack.style.backgroundColor="#52555e";
+                flipCardBack.style.backgroundColor="#4c79a1";
                 flipCardBack.style.color="white";
                 flipCardBack.style.transform = 'rotateY(180deg)';
                 document.getElementsByClassName("flip-card-inner")[0].style.transform = 'rotateY(180deg)';
@@ -490,7 +490,7 @@ Contact page
 
 
             } else if (button === "skills") {
-                flipCardBack.style.backgroundColor='#d0cbcc';
+                flipCardBack.style.backgroundColor='#c5c2cc';
                 flipCardBack.style.color="black";
                 createSkills(backDiv);
                 flipCardBack.style.transform = 'rotateX(-180deg)';
@@ -498,7 +498,7 @@ Contact page
 
 
                 } else if (button === "about") {
-                    flipCardBack.style.backgroundColor="#58524d";
+                    flipCardBack.style.backgroundColor="#57626e";
                     flipCardBack.style.color="white";
                 backDiv.innerHTML = aboutMeContent;
 
@@ -509,7 +509,7 @@ Contact page
 
             } else if (button==="contact"){
                 flipCardBack.style.color="black";
-                flipCardBack.style.backgroundColor="#e8dcd3";
+                flipCardBack.style.backgroundColor="#a7bfd8";
                 flipCardBack.style.transform = 'rotateY(-180deg)';
                 document.getElementsByClassName("flip-card-inner")[0].style.transform = 'rotateY(-180deg)';
 
