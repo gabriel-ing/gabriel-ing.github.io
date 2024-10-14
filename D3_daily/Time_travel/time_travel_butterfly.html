@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family:"roboto";
+    }
+    .future-bar{
+        fill:rgb(255, 124, 124);
+        
+    }
+    .future-bar:hover{
+        fill:red;
+    }
+    .chart{
+        display: block;
+        position:absolute;
+        background-color: rgb(246, 240, 218);
+        padding:20px;
+        margin:auto;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        height: 720px;
+    }
+
+    .past-bar{
+        fill: rgb(146, 146, 255);
+    }
+    .past-bar:hover{
+        fill:blue;
+    }
+    svg{
+        margin:auto;
+        
+    }
+    .subtitle{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .past-bar-labels, .future-bar-labels{
+        fill: rgb(255,255,255);
+        font-weight: 400;
+        font-size:20px;
+    }
+    h1{
+        text-align:center;
+        margin:10px 0px;
+
+    }
+
+</style>
+</head>
+<body>
+    <div class="chart" id="chart1">
+        <h1>Would Brits rather time-travel to the past or the future?</h1>
+        <p>Brits were asked, if you could time travel, would you rather go to the future or past? The missing proportions are for those who replied "don't know". Data from YouGov.</p>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="time_travel_butterfly.js"></script>
+</body>
