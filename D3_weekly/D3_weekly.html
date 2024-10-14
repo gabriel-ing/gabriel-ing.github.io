@@ -5,20 +5,44 @@
     <style> 
         *{
             font-family : roboto;
-            background-color: rgb(175, 144, 108);
+            
+            color: white;
         }
+        body{
+            background-color: #73747c;
+        }
+        h1{
+            text-transform: capitalize;
+        }
+        
         iframe{
             margin:50px;
+        }
+        .iframe-container{
+            background-color:#c0bebe ;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+        .intro{
+            text-align: center;
+            background-color:#444244 ;
         }
     </style>
 </head>
 <body>
-    <h1>D3 Dailies</h1>
+    <div class="intro">
+    <h1>D3 DAILY</h1>
     <p>I'm trying to build up a portfolio and practice log of using D3.js to visualise data. The visuals will use data from a mix of sources, with the priority being making interesting visuals rather than showing important data. I will aim to pick somewhat interesting datasets though! <br><br> I have called this project D3 Daily because of alliteration. I hope to do 2-3 visuals a week but I honestly have no idea how long I'll be able to keep the momentum up... 
     </p>
-
-    <iframe src="Running_data_bubble_chart/d3_csv_practice.html", width=900px height=730px></iframe>
+    </div>  
+    <div class="iframe-container">
+    <iframe src="Running_data_bubble_chart/d3_csv_practice.html", width=900px height=730px id="iframe"></iframe>
 
     <iframe src="Time_travel/time_travel_butterfly.html", width=900px height=800px></iframe>
-    
+    </div>
+
+
 </body>
