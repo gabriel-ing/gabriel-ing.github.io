@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin-left: 60px;
+            font-family: roboto;
+        }
+
+        #sections>div {
+            color: rgb(225, 225, 225);
+        }
+
+        #sections div.graph-scroll-active {
+            color: black;
+        }
+
+        p {
+            font-size: 20;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #sections {
+            width: 340px;
+        }
+
+        #motion-graph-div {
+            margin-left: 400px;
+            margin-right:100px;
+            width: 500px;
+            position: sticky;
+            top: 40px;
+            float: left;
+        }
+
+        .issue-section {
+            margin: 400px 0px;
+        }
+
+        .issue-title {
+            margin: 20px;
+        }
+        .annotation-text{
+            font-weight: 500;
+            font-size: 20px;
+        }
+        .x-axis, .y-axis{
+            font-size: 12px;
+        }
+    </style>
+    <script src="https://1wheel.github.io/graph-scroll/d3v4+jetpack.js"></script>
+    <script src="https://1wheel.github.io/graph-scroll/graph-scroll.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    <script>
+        window.onload = function() {
+        // Disable the browser's default scroll restoration behavior
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+    };</script>
+</head>
+
+<body>
+    <h1>Why Liquid-phase electron microscopy of proteins won't work...</h1>
+    </div>
+    <div id='container'>
+        <h1 class="issue-title">Problem 1: Rotational Blurring</h1>
+        <div id='motion-graph-div'></div>
+        <div id='sections'>
+            <div class="issue-section"></div>
+            <div class="issue-section">
+                <p>Particles in solution move in 3D. Translational motion on the XY plane can be visible in videos,
+                    rotational motion is harder to see.
+                    I'm going to ignore translational movement because it can be somewhat corrected, and for now only
+                    consider rotational blurring.
+                </p>
+                <p>
+                </p>
+            </div>
+            <div class="issue-section" id = "equ-sec">
+                <p>The natural rotation of particles in solution can be approximated by the following equation:
+                    $$\tau_r = \frac{8\pi\eta r^3}{k_BT}$$
+
+                    Where:
+                <ul>
+                    <li>
+                        K<sub>B</sub> = Boltzmann constant</li>
+                    <li>T = temperature </li>
+                    <li> η =Dynamic viscosity of the solvent</li>
+                    <li>r = particle radius </li>
+                    </li>
+                </ul>
+                <br>
+                This gives the  <strong>rotational relaxation time</strong> - the time after which the orientation is randomised. If the relaxation time is 1s then after 1s, a particle's orientation bares no statistical relationship to where it was a second ago.   
+                </p>
+            </div>
+
+            <div class="issue-section" id="graph-call-sec">
+                <p>
+                    Lets look at the effect of radius on relaxation time. For now I am going to assume constant viscosity and temperature.
+                    <br> <br>
+                    The <strong>r<sup>3</sup></strong>, or cubic dependence on radius makes this graph hard to understand, so lets look at it on a logarithmic axis:
+                </p>
+            </div>
+            <div class="issue-section" id="graph-call-sec">
+                <p>
+                    That's a bit clearer. The graph shows that the smaller the radius, the shorter the relaxation time. The next question is how short is too short? Well now we have to think about our effective frame rates. 
+
+                    <br><br> 
+
+                    I won't go fully into this here, but in   three levels of possible frame rate: <ul><li>Detector readout speed</li> <li>Detector transfer speed </li><li>Flux Limited (at 10e<sup>-</sup>Å<sup>-2</sup>s<sup>-1</sup>)</li> </ul>
+                    These can be summarised as the advertised, the actual and the damage limited.
+                    <br><br> 
+                    Lets annotate these onto the graph:
+                </p>
+
+            </div>
+            <div class="issue-section" id="">
+                <p>
+                    These appear to be pretty high on the graph - note that the smallest radius plotted is one nanometer! 
+                    <br><br>
+                    Now, lets consider the size of some example proteins which we want to view, starting with the cryo-EM standard protein Apoferritin:
+                </p>
+                
+            </div>
+            <div class="issue-section" id="">
+                <p>
+                    Do you see the problem? Let me spell it out: <br><br>
+
+                    Allowing for the fastest detector speed currently available (and ignoring the dose-limited detector speed), <strong>a virus-sized particle would randomise its orientation approximately every frame.</strong> 
+                </p>
+                
+            </div>
+            
+            <div class="issue-section">
+                <p>Now lets consider what this might mean for our images.</p>
+            </div>
+        </div>
+    </div>
+    <div id='container2'>
+        <div id='sections'>
+            <div></div>
+            <div>
+                <h1>Section 0 </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."
+
+                    Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+                </p>
+            </div>
+            <div>
+                <h1>Section 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."
+
+                    Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                </p>
+            </div>
+            <div>
+                <h1>Section 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum."
+
+                    Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                </p>
+            </div>
+        </div>
+    </div>
+    <h1>Footer</h1>
+    <script src="ltem-scroll.js">
+    </script>
+</body>
