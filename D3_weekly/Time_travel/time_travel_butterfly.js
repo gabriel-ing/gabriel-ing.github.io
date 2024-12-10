@@ -3,9 +3,13 @@ d3.csv("Age_group_results.csv").then(function(data){
     const width = 850 - margin.right - margin.left;
     const height = 650 - margin.top -margin.bottom;
     
+    console.log(data);
+
     const group = data.map(d => d.Group);
     const pastPercent = data.map(d=> d.Past);
     const futurePercent = data.map(d=> d.Future);
+
+
 
     const xpos = width/2;
 
@@ -13,6 +17,7 @@ d3.csv("Age_group_results.csv").then(function(data){
     const centerOffset = 50;
 
     const max_value = d3.max([d3.max(pastPercent), d3.max(futurePercent)]);
+
 
     const yScale = d3.scaleBand().domain(group).range([20, height]).padding(0.1);
     const xScale = d3.scaleLinear().domain([0, 100]).range([0, xpos]);
@@ -28,7 +33,10 @@ d3.csv("Age_group_results.csv").then(function(data){
         xpos + xScale(50)+centerOffset,
         xpos+xScale(75)+centerOffset
     ];
+    
     const guidelineLabels=[75, 50, 25,0,0,25,50,75];
+
+
 
     const svg = d3.select("#chart1")
     .append("svg")
