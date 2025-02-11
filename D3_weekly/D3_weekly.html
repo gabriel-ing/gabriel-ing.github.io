@@ -9,7 +9,7 @@
             color: white;
         }
         body{
-            background-color: #73747c;
+            background-color: #cccdce;
         }
         h1{
             text-transform: capitalize;
@@ -20,7 +20,7 @@
             margin:50px;
         }
         .iframe-container{
-            background-color:#c0bebe ;
+            background-color:#ececec ;
             display: grid;
             align-items: center;
             justify-content: center;
@@ -30,7 +30,18 @@
         .intro{
             text-align: center;
             background-color:#444244 ;
+            position: fixed;
+            top: 0px;
+            left:0px;
         }
+        .update{ 
+            margin-top: 200px;
+            background-color:  rgb(98, 98, 156);
+            padding: 10px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
     </style>
 </head>
 <body>
@@ -39,8 +50,8 @@
     <p>I'm trying to build up a portfolio and practice log of using D3.js to visualise data. The visuals will use data from a mix of sources, with the priority being making interesting visuals rather than showing important data. I will aim to pick somewhat interesting datasets though! <br><br> I hope to do 2-3 visuals a week but I honestly have no idea how long I'll be able to keep the momentum up... 
     </p>
     </div>  
-    <div> 
-        <h6>Update:</h6><p>Instead of making individual plots from random data sources, I have been working on creating a library of Reusable plots - this follows the structure defined by <a href="https://bost.ocks.org/mike/chart/">Mike Bostock</a> to make an easy to reuse libray. The current state of this library is <a href="https://gabriel-ing.github.io/ReusableD3Charts/">here.</a> <br> The aim of this is to straight-forwardly create a data dashboard by using previously created plots, rather than making new ones from scratch each time. Of course, a certain amount of customisation would always be beneficial, but I am aiming to allow rapid generation of good looking dashbaords. 
+    <div class=update> 
+        <h2>Update:</h2><p>Instead of making individual plots from random data sources, I have been working on creating a library of Reusable plots - this follows the structure defined by <a href="https://bost.ocks.org/mike/chart/">Mike Bostock</a> to make an easy to reuse libray. The current state of this library is <a href="https://gabriel-ing.github.io/ReusableD3Charts/">here.</a> <br> The aim of this is to straight-forwardly create a data dashboard by using previously created plots, rather than making new ones from scratch each time. Of course, a certain amount of customisation would always be beneficial, but I am aiming to allow rapid generation of good looking dashbaords. 
     </div>
     <div class="iframe-container">
     <iframe src="Running_data_bubble_chart/d3_csv_practice.html", width=900px height=730px id="iframe"></iframe>
