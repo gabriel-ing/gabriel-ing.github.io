@@ -21,7 +21,7 @@ df["Year_of_debut"]=df["Span"].apply(lambda x: x.split('-')[0])
 df["Last_played"] = df["Span"].apply(lambda x: x.split('-')[1])
 
 df["Country"] = df["Player"].apply(lambda x: x.split("(")[-1])
-df["Player"] = df["Player"].apply(lambda x: x.split("(")[:-1])
+df["Player"] = df["Player"].apply(lambda x: x.split("(")[0])
 
 df["Country"] = df["Country"].str.replace(")", "", regex=False)
 df["Country"] = df["Country"].str.replace("ICC/","")

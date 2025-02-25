@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="script-container">
+        <h5>Step 1: Setting up a web-server</h5>
+
+        <p>When developing our D3 plots, the first step will be to open the data. Unfortunately, browsers generally can't load local files for security reasons, so to develop the plot locally, you generally need to create a web-server. This process is quite simple but requires either python, node.js or something similar to be installed. Instructions for how to use different web servers can be found here:  </p>
+
+    </div>    
+
+    <div class="script-container">
+        <h5>Loading Data</h5>
+        <div class="script">
+        <p> d3.csv(  "MyData.csv"  ).then(  function(data)  {
+            <br>[...FUNCTION BODY...]<br>
+        });
+        </p>
+        </div>
+        <p>This opens the csv file and then passes the data from the file directly into a new function as a value called <i>data</i>. The function created below it is then run.  </p>
+        
+        
+    </div>
+
+
+        
+    <div id="chart">
+    </div>
+</body>

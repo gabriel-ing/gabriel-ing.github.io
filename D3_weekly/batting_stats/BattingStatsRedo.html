@@ -18,7 +18,8 @@
         stroke-width: 1px;
     }
     .cricket-bat:hover{
-        transform: scale(1.05);
+        
+        transform: scale(0.2);
         opacity:1;
         
         }
@@ -132,25 +133,21 @@
 
 </head>
 <body> 
-    <div id="chart"></div>
-    <script src="battingStats.js"></script> 
+    <div id="chart">
+        <svg width="860" height="900" 
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+        <g class="cricket-bat" transform="scale(0.01)" id="cricket-bat-base">
+        <path class="handle" d="M394.627,80.077c-6.6,-11.43 -21.237,-15.352 -32.668,-8.753l-41.42,23.914c-11.431,6.599 -15.353,21.237 -8.754,32.668l239.37,414.599c6.599,11.431 21.237,15.353 32.667,8.754l41.421,-23.915c11.43,-6.599 15.352,-21.237 8.753,-32.667l-239.369,-414.6Z" />
+        <path class="wood" d="M735.566,455.303c-21.453,-37.158 -69.036,-49.908 -106.193,-28.455l-134.648,77.739c-37.157,21.453 -49.907,69.036 -28.455,106.193l449.36,778.314c21.452,37.157 69.036,49.907 106.193,28.454l134.648,-77.739c37.157,-21.452 49.907,-69.036 28.454,-106.193l-449.359,-778.313Z" />
+        <path class="handle" d="M772.829,830.799l-252.201,-341.167l82.841,-47.829l169.36,388.996Z"/>
+        
+        </g>
+        
+        </svg>
+
+    </div>
+    <script src="battingStatsRedo.js"></script> 
     <div id="tooltip" style="position: absolute; opacity: 0; background: white; border: 1px solid black; padding: 0px; border-radius: 5px;" class="tooltip"></div>
 
-    <!--
-    <div id = "button-container">
-        <div class="button country-filter" id="IND-button" onclick="filterByCountry('IND')">IND</div>
-        <div class="button country-filter" id="AUS-button">AUS</div>
-        <div class="button country-filter" id="SA-button">SA</div>
-        <div class="button country-filter" id="ENG-button">ENG</div>
-        <div class="button country-filter" id="SL-button">SL</div>
-        <div class="button country-filter" id="WI-button">WI</div>
-        <div class="button country-filter" id="PAK-button">PAK</div>
-        <div class="button country-filter" id="NZ-button">NZ</div>
-        <div class="button country-filter" id="BAN-button">BAN</div>
-        <div class="button country-filter" id="RESET-button">RESET</div>
-    </div>
-    -->
-    <input type="text" id="range-start">
-    <input type="text" id="range-end">
     
 </body>
