@@ -1,0 +1,24 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "SimpliPyTEM",
+      "subtitle": "Python Library for processing electron microscopy data",
+      "description":"",
+      "tags": ["python", "image analysis", "science"],
+      "image-link": "images/SimpliPyTEM",
+      "blog-id": null,
+      "PhD": true
+    },
+    {
+      "id": 1,
+      "title": "Running Data Visual",
+      "description":"",
+      "subtitle": "An interactive visual displaying my running data",
+      "tags": ["JavaScript", "Data Visualisation", "D3.js"],
+      "image-link": "images/running-visual.gif",
+      "blog-id": null,
+      "PhD": false
+    }
+  ]
+}
