@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-
 @theme {
-  
   --color-purple: #bb95dc;
   --color-purple-95: #f3ecf9;
   --color-purple-90: #e6d9f2;
@@ -69,10 +67,40 @@
   --color-blue-30: #264a73;
   --color-blue-20: #19314d;
   --color-blue-10: #0d1926;
-  
- 
+  --color-grey: #b3abba;
+  --color-grey-95: #f2f1f3;
+  --color-grey-80: #ccc7d1;
+  --color-grey-70: #b3abba;
+  --color-grey-60: #9a8fa3;
+  --color-grey-50: #80738c;
+  --color-grey-40: #675c70;
+  --color-grey-30: #4d4554;
+  --color-grey-20: #332e38;
+  --color-grey-10: #1a171c;
 }
 
-body{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: auto transparent;
+  /* background: transparent; */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* gray-400 */
+  border-radius: 8px;
+}
+strong {
+  font-weight: 500;
 }

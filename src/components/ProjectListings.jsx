@@ -1,10 +1,15 @@
 import React from "react";
 import ProjectListing from "./ProjectListing.jsx";
 import { projects } from "../project_details.js";
+import { Link } from "react-router-dom";
+
+
+
 const ProjectListings = ({ishome = false}) => {
 
+
   let sectionClass;
-  let pinnedProjects = [0, 5];
+  let pinnedProjects = [0, 5, 4];
   let title;
   let selectedProjects = projects;
   if (ishome) {
@@ -25,7 +30,7 @@ const ProjectListings = ({ishome = false}) => {
           {title}
         </h2>
 
-        <>
+        
           <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 ">
             {selectedProjects.map((project, index) => (
               <ProjectListing
@@ -34,8 +39,8 @@ const ProjectListings = ({ishome = false}) => {
               ></ProjectListing>
             ))}
           </div>
-        </>
       </div>
+        {ishome&&(<div className="mt-8 hover:scale-105  w-40  "><Link to="projects" className="bg-white p-2 mt-5 text-xl rounded-3xl border-2 border-blue-70 text-blue-70 hover:text-blue-80">View More</Link></div> )}
     </section>
   );
 };

@@ -3,11 +3,11 @@ import React from "react";
 const About = () => {
   return (
     <div className="p-10">
-      <h2 className="text-5xl m-10">About me</h2>
+      <h2 className="text-3xl font-semibold">About me</h2>
       <img
-        src="src/images/About_photos/ING15738-3-compressed.jpg"
+        src="public/images/About_photos/ING15738-3-compressed.jpg"
         width="400px"
-        className="m-20"
+        className="m-auto mb-4 rounded-4xl border-2 border-purple-10"
       ></img>
       <p>
         Hi! I'm Gabriel am a programmer, scientist and PhD graduate living in
@@ -22,7 +22,7 @@ const About = () => {
         target="_blank"
       >
       </a> */}
-      <h3 className="text-2xl m-8">Education</h3>
+      <h3 className="text-2xl m-8  m-4 font-semibold">Education</h3>
       <ul className="mt-3 mb-3">
         <li>
           <p>
@@ -56,13 +56,13 @@ const About = () => {
           </p>
         </li>
       </ul>
-      <img src="src/images/About_photos/Me_at_loch_chon.jpg" height="400px"></img>
-      <h3 className="text-2xl m-8">Personal Interests</h3>
+
+      <h3 className="text-2xl m-8 font-semibold">Personal Interests</h3>
       <p>
         I like to stay busy, meaning now I have a ton of hobbies. They can
         generally be broken down into two categories:{" "}
       </p>
-      <h4>Sports</h4>
+      <h4 className="text-l m-4 font-semibold">Sports</h4>
       <ul>
         <li>
           <strong>Sailing</strong> - I competitively sailed throughout school
@@ -86,7 +86,7 @@ const About = () => {
           sport, and am loving it so far!
         </li>
       </ul>
-      <h4>Making things</h4>
+      <h4 className="text-l m-4 font-semibold">Making things</h4>
       <ul>
         <li>
           <strong>Knitting</strong> - I enjoy knitting and have made several
@@ -104,6 +104,13 @@ const About = () => {
           chilling out.
         </li>
       </ul>
+      <h3 className="text-2xl m-8  m-4 font-semibold">CV</h3>
+      <embed
+        src="public/cv.pdf"
+        width="600"
+        height="800"
+        type="application/pdf"
+      />
     </div>
   );
 };
