@@ -5,7 +5,7 @@ const About = () => {
     <div className="p-10">
       <h2 className="text-3xl font-semibold">About me</h2>
       <img
-        src="public/images/About_photos/ING15738-3-compressed.jpg"
+        src="images/About_photos/ING15738-3-compressed.jpg"
         width="400px"
         className="m-auto mb-4 rounded-4xl border-2 border-purple-10"
       ></img>
@@ -106,7 +106,7 @@ const About = () => {
       </ul>
       <h3 className="text-2xl m-8  m-4 font-semibold">CV</h3>
       <embed
-        src="public/cv.pdf"
+        src="cv.pdf"
         width="600"
         height="800"
         type="application/pdf"

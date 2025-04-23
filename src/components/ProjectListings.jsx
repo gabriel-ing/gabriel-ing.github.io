@@ -13,7 +13,7 @@ const ProjectListings = ({ishome = false}) => {
   let title;
   let selectedProjects = projects;
   if (ishome) {
-    sectionClass = "bg-red-95 px-4 py-10 rounded-2xl m-10";
+    sectionClass = "bg-red-95 px-4 py-10 rounded-2xl m-10 w-95/100";
     title = "Pinned Projects";
     selectedProjects = selectedProjects.filter((d) =>
       pinnedProjects.includes(d.id)
@@ -31,7 +31,7 @@ const ProjectListings = ({ishome = false}) => {
         </h2>
 
         
-          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 min-w-0">
             {selectedProjects.map((project, index) => (
               <ProjectListing
                 key={project.id}

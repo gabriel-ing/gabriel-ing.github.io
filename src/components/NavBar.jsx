@@ -17,7 +17,7 @@ const NavBar = () => {
               to="/"
             >
               <span className="md:block text-white text-2xl font-bold ml-2">
-                Gabriel Ing, PhD
+                Gabriel Ing
               </span>
             </NavLink>
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import DigitalBusinessCard from '../components/DigitalBusinessCard'
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <>
+    <DigitalBusinessCard></DigitalBusinessCard>
+    </>
   )
 }
 
