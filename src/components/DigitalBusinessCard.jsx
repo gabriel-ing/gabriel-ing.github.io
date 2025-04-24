@@ -5,7 +5,7 @@ const DigitalBusinessCard = () => {
   let [showBack, setShowBack] = useState(false);
   return (
     <>
-    <iframe src="public/Gabriel-Ing-Digital-Business-Card.html" scrolling="no" width="95%" height="600" className="overflow-hidden rounded-2xl m-10 bg-turquoise-95"></iframe>
+    <iframe src="Gabriel-Ing-Digital-Business-Card.html" scrolling="no" width="95%" height="600" className="overflow-hidden rounded-2xl m-10 bg-turquoise-95"></iframe>
       {
         // <>
         //   <div className="mt-20 mb-20 mx-auto w-4/5 bg-turquoise-90 h-100 rounded-3xl p-5 shadow-2xl" id="flipcard">

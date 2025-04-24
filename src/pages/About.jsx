@@ -106,7 +106,7 @@ const About = () => {
       </ul>
       <h3 className="text-2xl m-8  m-4 font-semibold">CV</h3>
       <embed
-        src="cv.pdf"
+        src="CV.pdf"
         width="600"
         height="800"
         type="application/pdf"
